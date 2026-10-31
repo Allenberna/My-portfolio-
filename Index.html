@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional portfolio of Allen Berna, management student with experience in marketing and customer engagement.">
+  <title>Allen Berna | Professional Portfolio</title>
+  <style>
+    :root {
+      --navy: #17324d;
+      --teal: #168c8c;
+      --ink: #263445;
+      --muted: #657586;
+      --pale: #eef4f7;
+      --line: #d9e2e8;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: #f4f7f9;
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1060px, 92%); margin: auto; }
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 18px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 3px 14px rgba(0,0,0,.12);
+    }
+    .nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .brand { font-weight: 800; letter-spacing: .5px; }
+    nav { display: flex; gap: 22px; flex-wrap: wrap; }
+    nav a { color: #e9f0f5; font-size: .92rem; }
+    nav a:hover { color: #7fe0d7; }
+    .hero {
+      color: var(--white);
+      background: linear-gradient(120deg, #17324d, #24566b);
+      padding: 86px 0 76px;
+    }
+    .eyebrow { color: #85e0d6; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: .78rem; }
+    h1 { font-size: clamp(2.5rem, 7vw, 4.6rem); line-height: 1.08; margin: 12px 0; }
+    .hero h2 { color: #c9e9e7; font-size: clamp(1rem, 2.5vw, 1.3rem); font-weight: 500; margin: 0 0 20px; }
+    .hero p { max-width: 690px; color: #e4edf2; margin-bottom: 28px; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 11px 19px; border-radius: 7px;
+      font-weight: 700; background: var(--teal); color: white;
+    }
+    .btn.outline { background: transparent; border: 1px solid #c9e9e7; }
+    section { padding: 62px 0; }
+    .section-title { color: var(--navy); font-size: 1.75rem; margin: 0 0 8px; }
+    .section-intro { color: var(--muted); margin: 0 0 28px; max-width: 720px; }
+    .accent { width: 54px; height: 4px; background: var(--teal); border-radius: 4px; margin: 12px 0 20px; }
+    .about-grid, .two-col { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; }
+    .card {
+      background: var(--white); border: 1px solid var(--line); border-radius: 13px;
+      padding: 24px; box-shadow: 0 8px 25px rgba(23,50,77,.045);
+    }
+    .card h3 { color: var(--navy); margin: 0 0 5px; font-size: 1.12rem; }
+    .muted { color: var(--muted); }
+    .skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .skill {
+      background: var(--pale); border: 1px solid var(--line); border-radius: 8px;
+      padding: 12px 14px; font-weight: 600; font-size: .94rem;
+    }
+    .timeline { display: grid; gap: 18px; }
+    .role-meta { color: var(--teal); font-weight: 700; font-size: .9rem; }
+    ul { padding-left: 20px; margin-bottom: 0; }
+    li { margin: 6px 0; }
+    .education-item { display: flex; justify-content: space-between; gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+    .education-item:last-child { border-bottom: 0; }
+    .year { color: var(--muted); white-space: nowrap; font-size: .9rem; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 22px; }
+    .stat { background: var(--pale); border-radius: 10px; padding: 18px; }
+    .stat strong { display: block; color: var(--teal); font-size: 1.35rem; }
+    .contact-band { background: var(--navy); color: white; border-radius: 14px; padding: 28px; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .contact-band h3 { margin: 0 0 5px; }
+    .contact-band p { margin: 0; color: #dce8ef; }
+    footer { padding: 22px 0; text-align: center; color: var(--muted); font-size: .88rem; }
+    @media (max-width: 700px) {
+      .nav { align-items: flex-start; flex-direction: column; }
+      nav { gap: 13px; }
+      .hero { padding: 62px 0; }
+      .about-grid, .two-col { grid-template-columns: 1fr; }
+      .skills { grid-template-columns: 1fr; }
+      .education-item { flex-direction: column; gap: 2px; }
+      .stats { grid-template-columns: 1fr; }
+    }
+    @media print {
+      header { position: static; }
+      .hero { padding: 45px 0; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      section { padding: 30px 0; }
+      .card, .contact-band { break-inside: avoid; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      nav, .actions { display: none; }
+      body { background: white; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">ALLEN BERNA.F</div>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Professional Portfolio</div>
+        <h1>Allen Berna.F</h1>
+        <h2>Management Student | Marketing &amp; Business Growth</h2>
+        <p>
+          MBA (PGDM) student with hands-on experience in digital marketing,
+          campaign support, customer engagement, and market analysis.
+          Interested in contributing to business growth through customer-focused
+          marketing and practical problem-solving.
+        </p>
+        <div class="actions">
+          <a class="btn" href="#experience">View My Experience</a>
+          <a class="btn outline" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="accent"></div>
+        <div class="about-grid">
+          <div class="card">
+            <h3>Profile</h3>
+            <p>
+              I am a management student with a commerce foundation and practical
+              internship exposure in marketing and customer-facing activities.
+              My experience includes supporting campaigns, responding to customer
+              queries, tele-calling, and assisting with product promotions.
+            </p>
+            <p class="muted">
+              I am keen to continue developing my analytical, communication,
+              and business problem-solving skills.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Career Focus</h3>
+            <p>
+              Building practical capability across marketing, customer experience,
+              market understanding, and business operations.
+            </p>
+            <h3 style="margin-top:20px;">Professional Strengths</h3>
+            <p class="muted">Analytical mindset · Customer focus · Willingness to learn · Team support</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" style="background:#fff;">
+      <div class="container">
+        <h2 class="section-title">Core Skills</h2>
+        <div class="accent"></div>
+        <p class="section-intro">Skills developed through academic learning and internship experience.</p>
+        <div class="skills">
+          <div class="skill">Analytical Thinking &amp; Problem Solving</div>
+          <div class="skill">Market Research &amp; Consumer Understanding</div>
+          <div class="skill">Digital Marketing &amp; Campaign Support</div>
+          <div class="skill">Customer Engagement &amp; Query Handling</div>
+          <div class="skill">Lead Generation Support</div>
+          <div class="skill">Tele-calling &amp; Product Promotion</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="accent"></div>
+        <div class="card">
+          <div class="education-item">
+            <div>
+              <h3>Post Graduate Diploma in Management (PGDM)</h3>
+              <div class="muted">Firebird Institute of Research in Management, Coimbatore</div>
+            </div>
+            <div class="year">2025–Present</div>
+          </div>
+          <div class="education-item">
+            <div>
+              <h3>Bachelor of Commerce (B.Com – General)</h3>
+              <div class="muted">Annai Velankanni College, Tholayavattam</div>
+            </div>
+            <div class="year">2022–2025</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" style="background:#fff;">
+      <div class="container">
+        <h2 class="section-title">Internship Experience</h2>
+        <div class="accent"></div>
+        <p class="section-intro">Practical exposure to customer engagement, marketing support, and lead-generation activities.</p>
+        <div class="timeline">
+          <article class="card">
+            <h3>Sales and Marketing Intern</h3>
+            <div class="role-meta">Aadharvaa Suzuki &nbsp;|&nbsp; 5 months</div>
+            <ul>
+              <li>Assisted in handling 20+ customer interactions daily, supporting customer engagement and satisfaction.</li>
+              <li>Managed and responded to customer queries to support a better service experience.</li>
+              <li>Supported digital marketing activities and product promotions.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Marketing Intern</h3>
+            <div class="role-meta">Solnac Energies &nbsp;|&nbsp; 2 months</div>
+            <ul>
+              <li>Managed campaign support, customer queries, and tele-calling activities.</li>
+              <li>Supported digital marketing and lead-generation efforts.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Academic Project</h2>
+        <div class="accent"></div>
+        <article class="card">
+          <h3>Study on Problems Faced by Rubber Workers</h3>
+          <p>
+            Conducted a survey with 60 respondents and analyzed key challenges
+            faced by rubber workers.
+          </p>
+          <ul>
+            <li>Identified issues related to income instability.</li>
+            <li>Examined health risks faced by workers.</li>
+            <li>Highlighted the impact of price fluctuations.</li>
+          </ul>
+          <div class="stats">
+            <div class="stat"><strong>60</strong><span>Survey respondents</span></div>
+            <div class="stat"><strong>3 themes</strong><span>Income, health, and price challenges</span></div>
+            <div class="stat"><strong>Survey</strong><span>Research and analysis method</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-band">
+          <div>
+            <h3>Let's Connect</h3>
+            <p>Thank you for reviewing my professional portfolio.</p>
+          </div>
+          <div>
+            <div><strong>Phone:</strong> <a href="tel:+918807476238">+91 8807476238</a></div>
+            <div><strong>Email:</strong> <a href="mailto:allenberna2930@gmail.com">allenberna2930@gmail.com</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Allen Berna.F · Professional Portfolio
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
